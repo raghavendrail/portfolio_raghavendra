@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Subtle Star Background (Professional Version) */
+
+.stars,
+.stars2,
+.stars3 {
+  position: fixed;
+  inset: 0;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  z-index: -20;
+}
+
+.stars {
+  box-shadow:
+    200px 300px rgba(255,255,255,0.15),
+    800px 1200px rgba(255,255,255,0.15),
+    1400px 600px rgba(255,255,255,0.15),
+    1700px 900px rgba(255,255,255,0.15);
+  animation: starMove 120s linear infinite;
+}
+
+.stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    400px 800px rgba(255,255,255,0.12),
+    1000px 300px rgba(255,255,255,0.12),
+    1600px 1100px rgba(255,255,255,0.12);
+  animation: starMove 180s linear infinite;
+}
+
+.stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow:
+    600px 500px rgba(255,255,255,0.1),
+    1300px 900px rgba(255,255,255,0.1);
+  animation: starMove 240s linear infinite;
+}
+
+@keyframes starMove {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}

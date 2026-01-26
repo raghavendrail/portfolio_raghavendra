@@ -1,0 +1,38 @@
+/* STAR BACKGROUND — REACT SAFE */
+
+.stars,
+.stars2,
+.stars3 {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -10;
+}
+
+.stars {
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 80% 70%, rgba(255,255,255,0.4), transparent),
+    radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,0.4), transparent);
+  animation: moveStars 120s linear infinite;
+}
+
+.stars2 {
+  background-image:
+    radial-gradient(2px 2px at 30% 40%, rgba(255,255,255,0.3), transparent),
+    radial-gradient(2px 2px at 70% 20%, rgba(255,255,255,0.3), transparent);
+  animation: moveStars 180s linear infinite;
+}
+
+.stars3 {
+  background-image:
+    radial-gradient(3px 3px at 60% 60%, rgba(255,255,255,0.2), transparent);
+  animation: moveStars 240s linear infinite;
+}
+
+@keyframes moveStars {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-1000px); }
+}
